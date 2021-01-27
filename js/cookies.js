@@ -35,9 +35,9 @@ class Cookies {
                 fill('white');
                 textSize(36);
                 text("You don't need talent to gain experience.", 300, 175);
-                noLoop();
+                loop();
 
-                //resetSketch();
+                resetSketch();
             }
             console.log('works');
             return true

@@ -12,7 +12,7 @@ function setup() {
     resetSketch();
     const button = createButton('dream again');
     button.mousePressed(resetSketch);
-    button.position(950, 50);
+    button.position(CENTER, 90);
     button.style('color: purple');
     button.size(100, 30);
 }
@@ -35,6 +35,8 @@ function keyPressed() {
     } 
     console.log(keyCode);
 }
+
+
 
 
 
