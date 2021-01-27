@@ -9,6 +9,7 @@ class Player {
         this.x = 150;
         this.y = height - this.height;
         
+        
     }
     jump() {
         console.log('jumping');

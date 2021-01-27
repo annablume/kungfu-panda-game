@@ -46,7 +46,7 @@ class Game {
                 this.cookieImage.remove();
                 }
         }
-
+ 
        
        
         // we iterate over obstacles and draw then on the canvas 
@@ -62,14 +62,9 @@ class Game {
             if (obstacle.collision(this.player) || obstacle.x < 0) {
                 return false
              } 
-            //  if (this.obstacle.x <= 0) {
-            //     delete this.obstacle
-            // }
             else {
                 return true
             }
-
-
         })
 
         // we iterate over obstacles and draw then on the canvas 
@@ -85,9 +80,7 @@ class Game {
             if (cookie.collision(this.player) || cookie.x < 0) {
                 return false
              } 
-            //  if (this.obstacle.x <= 0) {
-            //     delete this.obstacle
-            // }
+            
             else {
                 return true
             }

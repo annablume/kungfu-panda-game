@@ -1,4 +1,5 @@
 
+
 class Cookies {
     constructor(image) { 
         this.image = image;
@@ -9,10 +10,18 @@ class Cookies {
         this.width = 50;
         this.height = 50;
         this.sound;
+        
+        
     }
 
     preload() {
         this.sound = createAudio('assets/sounds/gong.mp3'); 
+    }
+
+    setup() {
+        // setVolume doesn't work here:
+        // this.sound.setVolume(0);
+        
     }
 
     collision(playerInfo) {
@@ -30,29 +39,40 @@ class Cookies {
             // collision was detected
 
             game.player.scoreW += 1;
+            
             this.sound.play();
-            if (game.player.scoreW > 3  ) {
-                fill('white');
-                textSize(36);
-                text("You don't need talent to gain experience.", 300, 175);
-                loop();
+            this.sound.volume(0.1);
+            
+            if (game.player.scoreW > (random(1, 5))) {
+                // fill('white');
+                // textSize(36);
+                // text("You don't need talent to gain experience.", 300, 175); 
+                let queryselector = document.querySelector(".saying h2");
+                queryselector.innerText = ("You don't need talent to gain experience.")
 
-                resetSketch();
             }
             console.log('works');
             return true
+            resetSketch()
         }
-
+ 
     }
+
+
     draw() {
+        
         this.x -= 2;
         image(this.image, this.x, this.y, this.width, this.height);
         // console.log('obstacle drawing');
-        // score and text 
-    
+        // score and text;
+
+
         fill('white');
         textSize(18);
         text("Wisdom: " + game.player.scoreW, 550, 375); 
+
+
+
     }
 }
 
