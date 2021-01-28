@@ -38,7 +38,7 @@ class Cookies {
                 // let queryselector = document.querySelector(".saying h2");
                 // queryselector.innerText = ("You don't need talent to gain experience.")
                 let c;
-                c = color('#6e055085');
+                c = color('#ffffff95');
                 noStroke();
                 fill(c);
                 rect(180, 100, 700, 140, 20);
@@ -46,11 +46,11 @@ class Cookies {
                 // here could be an object to pick a random text
                 //
                 textSize(30);
-                fill('white')
+                fill('black')
                 text("Excitement will follow you", 500, 150);
 
                 textSize(30);
-                fill('white');
+                fill('black');
                 text("into any transit station of your choice.", 500, 200);
 
                 noLoop();
@@ -82,8 +82,10 @@ class Cookies {
         // if timer is 0 it will show the game over text
         if (timer == 0) {
             text("DREAM OVER", width/2, height*0.5);
-            fill('white'); 
+            fill('white');
+            ele.stop(); 
             noLoop();
+            
              
         }  
     }

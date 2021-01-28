@@ -6,8 +6,8 @@ class Player {
         this.scoreD = 0;
         this.gravity = 0.2;
         this.velocity = 0;
-        this.width = 100; 
-        this.height = 140;
+        this.width = 160; 
+        this.height = 160;
         this.x = 150;
         this.y = height - this.height;
         
@@ -17,6 +17,11 @@ class Player {
         console.log('jumping');
         // we set velocity temporarily to a negative (higher on the screen) value
         this.velocity = - 10.5;
+        // if (this.x == 150) {
+        // ele = createAudio('assets/sounds/jumplandingground.wav');
+        // ele.autoplay(true)
+        // ele.volume(0.1);
+        // }
         loop();
     }
 
@@ -35,6 +40,6 @@ class Player {
             this.y = height - this.height;
         }
        
-        image(game.playerImage, this.x, this.y, this.width, this.height);  
+        image(game.playerImage, this.x, this.y, this.width, this.height);
     }
 }
