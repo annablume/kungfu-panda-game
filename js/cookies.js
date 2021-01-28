@@ -31,13 +31,29 @@ class Cookies {
             game.player.scoreW += 1;
             
             this.sound.play();
-            this.sound.volume(0.1);
+            this.sound.volume(0.07);
             
-            if (game.player.scoreW > (random(1, 5))) {
+            if (game.player.scoreW > (random(1, 7))) {
 
-                let queryselector = document.querySelector(".saying h2");
-                queryselector.innerText = ("You don't need talent to gain experience.")
+                // let queryselector = document.querySelector(".saying h2");
+                // queryselector.innerText = ("You don't need talent to gain experience.")
+                let c;
+                c = color('#6e055085');
+                noStroke();
+                fill(c);
+                rect(180, 100, 700, 140, 20);
 
+                // here could be an object to pick a random text
+                //
+                textSize(30);
+                fill('white')
+                text("Excitement will follow you", 500, 150);
+
+                textSize(30);
+                fill('white');
+                text("into any transit station of your choice.", 500, 200);
+
+                noLoop();
             }
             console.log('works');
             return true
@@ -65,7 +81,7 @@ class Cookies {
         }
         // if timer is 0 it will show the game over text
         if (timer == 0) {
-            text("DREAM OVER", width/2, height*0.7);
+            text("DREAM OVER", width/2, height*0.5);
             fill('white'); 
             noLoop();
              

@@ -1,6 +1,6 @@
 const game = new Game();
 let timer = 60;
-
+let ele;
 
 // here we preload the images from the game.preload
 function preload() {
@@ -9,7 +9,11 @@ function preload() {
 
 function setup() {
     createCanvas(1000, 400)
-    game.setup();
+    ele = createAudio('assets/sounds/china-loop.wav');
+    ele.autoplay(true)
+    ele.volume(0.1);
+    ele.loop();
+;    game.setup();
     //resetSketch();
 }
 

@@ -1,3 +1,5 @@
+ 
+
 class Player {
     constructor() {
         this.scoreW = 0;
@@ -15,6 +17,7 @@ class Player {
         console.log('jumping');
         // we set velocity temporarily to a negative (higher on the screen) value
         this.velocity = - 10.5;
+        loop();
     }
 
     

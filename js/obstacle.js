@@ -30,7 +30,7 @@ class Obstacle {
 
             game.player.scoreD += 1;
             this.sound.play();
-            this.sound.volume(0.1);
+            this.sound.volume(0.05);
             console.log('works');
             return true
         }
