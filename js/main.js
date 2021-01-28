@@ -6,12 +6,16 @@ let ele;
 function preload() {
     game.preload();
 }
+function mouseClicked() {
+    ele.play();
+  };
 
 function setup() {
     createCanvas(1000, 400)
     ele = createAudio('assets/sounds/china-loop.wav');
-    ele.autoplay(true)
+    //ele.autoplay(true)
     ele.volume(0.1);
+    
     ele.loop();
 ;    game.setup();
     //resetSketch();
