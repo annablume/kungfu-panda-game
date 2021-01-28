@@ -8,7 +8,7 @@ class Player {
         this.velocity = 0;
         this.width = 160; 
         this.height = 160;
-        this.x = 150;
+        this.x = 200;
         this.y = height - this.height;
         
         

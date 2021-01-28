@@ -37,21 +37,35 @@ class Cookies {
 
                 // let queryselector = document.querySelector(".saying h2");
                 // queryselector.innerText = ("You don't need talent to gain experience.")
-                let c;
-                c = color('#ffffff95');
-                noStroke();
-                fill(c);
-                rect(180, 100, 700, 140, 20);
-
-                // here could be an object to pick a random text
                 //
-                textSize(30);
-                fill('black')
-                text("Excitement will follow you", 500, 150);
+                //rect(180, 100, 800, 140, 20);
 
-                textSize(30);
-                fill('black');
-                text("into any transit station of your choice.", 500, 200);
+                // here could be an array to pick a randomly on i print
+                let words = [
+                    'Excitement will follow you into any transit station of your choice.',
+                    'You will meet an important person who will help you advance professionally. Excitement will follow',
+                    'Excitement your true value depends entirely on what you are compared with. %',
+                    'Change your thoughts and you change your world.',
+                    'You will wish that you had done some of the hard things when they were easier to do.',
+                    'You will attract cultured and artistic people to your home.',
+                    'Tomorrow, this will be part of the unchangeable past but fortunately, it can still be changed today.',
+                    'Generosity and perfection are your everlasting goals.',
+                    'You will have long and healthy life.',
+                    'Save energy: be apathetic.',
+                    'Good news from afar can bring you a welcome visitor.'
+                ];
+
+                let word = random(words);
+                textSize(40);
+                textAlign(CENTER);
+                textStyle(BOLD);
+                fill('white')
+                text(word, 300, 105, 600);
+                // text("Excitement will follow you into any transit station of your choice.", 300, 135, 400);
+
+                // textSize(30);
+                // fill('black');
+                // text("into any transit station of your choice.", 500, 200);
 
                 noLoop();
             }

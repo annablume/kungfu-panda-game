@@ -1,5 +1,5 @@
 const game = new Game();
-let timer = 60;
+let timer = 40;
 let ele;
 
 // here we preload the images from the game.preload
