@@ -1,5 +1,3 @@
-
-
 class Cookies {
     constructor(image) { 
         this.image = image;
@@ -9,19 +7,11 @@ class Cookies {
         this.y = (Math.random() * height) / 2.5;
         this.width = 50;
         this.height = 50;
-        this.sound;
-        
-        
+        this.sound;   
     }
 
     preload() {
         this.sound = createAudio('assets/sounds/gong.mp3'); 
-    }
-
-    setup() {
-        // setVolume doesn't work here:
-        // this.sound.setVolume(0);
-        
     }
 
     collision(playerInfo) {
@@ -44,18 +34,15 @@ class Cookies {
             this.sound.volume(0.1);
             
             if (game.player.scoreW > (random(1, 5))) {
-                // fill('white');
-                // textSize(36);
-                // text("You don't need talent to gain experience.", 300, 175); 
+
                 let queryselector = document.querySelector(".saying h2");
                 queryselector.innerText = ("You don't need talent to gain experience.")
 
             }
             console.log('works');
             return true
-            resetSketch()
+            
         }
- 
     }
 
 
@@ -64,15 +51,25 @@ class Cookies {
         this.x -= 2;
         image(this.image, this.x, this.y, this.width, this.height);
         // console.log('obstacle drawing');
+
         // score and text;
-
-
         fill('white');
         textSize(18);
-        text("Wisdom: " + game.player.scoreW, 550, 375); 
-
-
-
+        text("Wisdom: " + game.player.scoreW, 550, 375);    
+        textAlign(CENTER, CENTER);
+        textSize(50);
+        text(timer, width/2, height/2, 700, 325);
+        // timer runs from 60 - 0 and stops
+        if (frameCount % 60 == 0 && timer > 0) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
+            timer --;
+        }
+        // if timer is 0 it will show the game over text
+        if (timer == 0) {
+            text("DREAM OVER", width/2, height*0.7);
+            fill('white'); 
+            noLoop();
+             
+        }  
     }
 }
 

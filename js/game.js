@@ -3,6 +3,7 @@ class Game {
         this.backgroundImages;
         this.coinImage;
         this.cookieImage;
+        
     }
 
     setup() {
@@ -19,7 +20,7 @@ class Game {
             { src: loadImage('assets/background/plx-2.png'), x: 0, speed: 1 },
             { src: loadImage('assets/background/plx-3.png'), x: 0, speed: 2 },
         ]
-        this.playerImage = loadImage('assets/player/bb8.gif');
+        this.playerImage = loadImage('assets/player/po.gif');
         this.coinImage = loadImage('assets/coins/tile000.png');
         this.cookieImage = loadImage('assets/coins/cookie.png');
         
@@ -67,7 +68,7 @@ class Game {
             }
         })
 
-        // we iterate over obstacles and draw then on the canvas 
+        // we iterate over obstacles and draw them on the canvas 
         this.cookies.forEach(function (cookie) {
             cookie.draw()
         })
